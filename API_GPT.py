@@ -4,12 +4,12 @@ from flask import Flask, request, jsonify
 
 # Carrega os dados do arquivo JSON
 # Carrega os dados do arquivo JSON
-with open('eventos_teste.json', encoding = "utf-8") as file:
-    eventos_data = json.load(file)
-print(eventos_data)  # Verifica se os dados foram carregados corretamente
+# Carrega os dados do arquivo JSON
+with open('eventos_teste.json', encoding="utf-8") as file:
+    eventos_data = json.loads(file.read())
 
 # Configuração da API da OpenAI
-openai.api_key = "SUA CHAVE"
+openai.api_key = "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"
 
 # Inicialização do servidor Flask
 app = Flask(__name__)
@@ -61,3 +61,12 @@ def pergunta_evento():
 # Execução do servidor Flask
 if __name__ == '__main__':
     app.run()
+
+##teste no postman
+## http://localhost:5000/pergunta-evento
+
+## pergunta teste
+
+##    {
+ ##   "pergunta": "quais os eventos?"
+ ##     }
