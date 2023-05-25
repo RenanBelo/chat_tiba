@@ -9,7 +9,7 @@ with open('eventos_teste.json', encoding="utf-8") as file:
     eventos_data = json.loads(file.read())
 
 # Configuração da API da OpenAI
-openai.api_key = "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"
+openai.api_key = "sua chave"
 
 # Inicialização do servidor Flask
 app = Flask(__name__)
